@@ -1,6 +1,6 @@
 package utils
 
-type Solution func(input string) string
+type Solution func(input string) int
 
 type Day string
 

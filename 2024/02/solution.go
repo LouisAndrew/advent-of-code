@@ -96,7 +96,7 @@ func (r report) isSaveWithDampener() bool {
 	return false
 }
 
-func Solution(input string) string {
+func Solution(input string) int {
 	reports := parseReports(input)
 	valid := 0
 	for _, r := range reports {
@@ -105,5 +105,5 @@ func Solution(input string) string {
 		}
 	}
 
-	return strconv.Itoa(valid)
+	return valid
 }

@@ -8,23 +8,25 @@ import (
 
 	day_one "github.com/louisandrew/advent-of-code/2024/01"
 	day_two "github.com/louisandrew/advent-of-code/2024/02"
+	day_three "github.com/louisandrew/advent-of-code/2024/03"
 	"github.com/louisandrew/advent-of-code/2024/utils"
 )
 
 var solutionsMap = map[utils.Day]utils.Solution{
-	utils.DAY_ONE: day_one.Solution,
-	utils.DAY_TWO: day_two.Solution,
+	utils.DAY_ONE:   day_one.Solution,
+	utils.DAY_TWO:   day_two.Solution,
+	utils.DAY_THREE: day_three.Solution,
 }
 
-func runSolution(dayStr string, inputFilePath string) (string, error) {
+func runSolution(dayStr string, inputFilePath string) (int, error) {
 	input, err := os.ReadFile(inputFilePath)
 	if err != nil {
-		return "", fmt.Errorf("Error opening file: %v", err)
+		return 0, fmt.Errorf("Error opening file: %v", err)
 	}
 
 	solution, ok := solutionsMap[utils.Day(dayStr)]
 	if !ok {
-		return "", fmt.Errorf("No solution found for day %v", dayStr)
+		return 0, fmt.Errorf("No solution found for day %v", dayStr)
 	}
 
 	return solution(string(input)), nil

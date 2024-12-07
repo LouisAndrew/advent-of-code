@@ -34,7 +34,7 @@ func parseIdList(input string) [2][]int {
 	return output
 }
 
-func Solution(input string) string {
+func Solution(input string) int {
 	output := 0
 
 	similarityScoreMap := map[int]int{}
@@ -59,5 +59,5 @@ func Solution(input string) string {
 		output += storedSimilarityScore * id
 	}
 
-	return strconv.Itoa(output)
+	return output
 }
