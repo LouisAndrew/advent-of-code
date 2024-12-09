@@ -7,6 +7,14 @@ func (c Coordinate) Add(d Direction) Coordinate {
 	return Coordinate{c[0] + d[0], c[1] + d[1]}
 }
 
+// Difference of two coordinates, in absolute
+func (c Coordinate) Diff(c2 Coordinate) Coordinate {
+	return Coordinate{
+		c[0] - c2[0],
+		c[1] - c2[1],
+	}
+}
+
 type CoordinateRange struct {
 	Min Coordinate
 	Max Coordinate
