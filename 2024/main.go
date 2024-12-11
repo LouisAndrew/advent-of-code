@@ -16,20 +16,22 @@ import (
 	day_eight "github.com/louisandrew/advent-of-code/2024/08"
 	day_nine "github.com/louisandrew/advent-of-code/2024/09"
 	day_ten "github.com/louisandrew/advent-of-code/2024/10"
+	day_eleven "github.com/louisandrew/advent-of-code/2024/11"
 	"github.com/louisandrew/advent-of-code/2024/utils"
 )
 
 var solutionsMap = map[utils.Day]utils.Solution{
-	utils.DAY_ONE:   day_one.Solution,
-	utils.DAY_TWO:   day_two.Solution,
-	utils.DAY_THREE: day_three.Solution,
-	utils.DAY_FOUR:  day_four.Solution,
-	utils.DAY_FIVE:  day_five.Solution,
-	utils.DAY_SIX:   day_six.Solution,
-	utils.DAY_SEVEN: day_seven.Solution,
-	utils.DAY_EIGHT: day_eight.Solution,
-	utils.DAY_NINE:  day_nine.Solution,
-	utils.DAY_TEN:   day_ten.Solution,
+	utils.DAY_ONE:    day_one.Solution,
+	utils.DAY_TWO:    day_two.Solution,
+	utils.DAY_THREE:  day_three.Solution,
+	utils.DAY_FOUR:   day_four.Solution,
+	utils.DAY_FIVE:   day_five.Solution,
+	utils.DAY_SIX:    day_six.Solution,
+	utils.DAY_SEVEN:  day_seven.Solution,
+	utils.DAY_EIGHT:  day_eight.Solution,
+	utils.DAY_NINE:   day_nine.Solution,
+	utils.DAY_TEN:    day_ten.Solution,
+	utils.DAY_ELEVEN: day_eleven.Solution,
 }
 
 func runSolution(dayStr string, inputFilePath string) (int, error) {
