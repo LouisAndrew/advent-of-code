@@ -40,6 +40,29 @@ func (m *CoordinateMap) Add(c Coordinate) {
 	(*m)[c[0]] = append((*m)[c[0]], c[1])
 }
 
+func (m *CoordinateMap) Length() int {
+	count := 0
+	for _, v := range *m {
+		count += len(v)
+	}
+
+	return count
+}
+
+func (m *CoordinateMap) Clear() {
+	*m = CoordinateMap{}
+}
+
+func (m *CoordinateMap) Merge(m2 *CoordinateMap) {
+	for x, v := range *m2 {
+		for _, y := range v {
+			m.Add(Coordinate{x, y})
+		}
+	}
+
+	m2.Clear()
+}
+
 func BuildCoordinateMap(coordinates []Coordinate) CoordinateMap {
 	m := CoordinateMap{}
 	for _, c := range coordinates {

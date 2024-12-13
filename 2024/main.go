@@ -17,6 +17,7 @@ import (
 	day_nine "github.com/louisandrew/advent-of-code/2024/09"
 	day_ten "github.com/louisandrew/advent-of-code/2024/10"
 	day_eleven "github.com/louisandrew/advent-of-code/2024/11"
+	day_twelve "github.com/louisandrew/advent-of-code/2024/12"
 	"github.com/louisandrew/advent-of-code/2024/utils"
 )
 
@@ -32,6 +33,7 @@ var solutionsMap = map[utils.Day]utils.Solution{
 	utils.DAY_NINE:   day_nine.Solution,
 	utils.DAY_TEN:    day_ten.Solution,
 	utils.DAY_ELEVEN: day_eleven.Solution,
+	utils.DAY_TWELVE: day_twelve.Solution,
 }
 
 func runSolution(dayStr string, inputFilePath string) (int, error) {
